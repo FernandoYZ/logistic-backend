@@ -16,6 +16,32 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@app/comun": [
+        "libs/comun/src"
+      ],
+      "@app/comun/*": [
+        "libs/comun/src/*"
+      ],
+      "@app/seguridad": [
+        "libs/seguridad/src"
+      ],
+      "@app/seguridad/*": [
+        "libs/seguridad/src/*"
+      ],
+      "@lib/comun": [
+        "libs/comun/src"
+      ],
+      "@lib/comun/*": [
+        "libs/comun/src/*"
+      ],
+      "@lib/seguridad": [
+        "libs/seguridad/src"
+      ],
+      "@lib/seguridad/*": [
+        "libs/seguridad/src/*"
+      ]
+    }
   }
 }
