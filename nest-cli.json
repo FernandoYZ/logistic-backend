@@ -1,8 +1,77 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
+  "sourceRoot": "apps/api-gateway/src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/api-gateway",
+  "projects": {
+    "api-gateway": {
+      "type": "application",
+      "root": "apps/api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+      }
+    },
+    "comun": {
+      "type": "library",
+      "root": "libs/comun",
+      "entryFile": "index",
+      "sourceRoot": "libs/comun/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/comun/tsconfig.lib.json"
+      }
+    },
+    "seguridad": {
+      "type": "library",
+      "root": "libs/seguridad",
+      "entryFile": "index",
+      "sourceRoot": "libs/seguridad/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/seguridad/tsconfig.lib.json"
+      }
+    },
+    "servicio-inventario": {
+      "type": "application",
+      "root": "apps/servicio-inventario",
+      "entryFile": "main",
+      "sourceRoot": "apps/servicio-inventario/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/servicio-inventario/tsconfig.app.json"
+      }
+    },
+    "servicio-pedidos": {
+      "type": "application",
+      "root": "apps/servicio-pedidos",
+      "entryFile": "main",
+      "sourceRoot": "apps/servicio-pedidos/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/servicio-pedidos/tsconfig.app.json"
+      }
+    },
+    "servicio-proveedores": {
+      "type": "application",
+      "root": "apps/servicio-proveedores",
+      "entryFile": "main",
+      "sourceRoot": "apps/servicio-proveedores/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/servicio-proveedores/tsconfig.app.json"
+      }
+    },
+    "servicio-tracking": {
+      "type": "application",
+      "root": "apps/servicio-tracking",
+      "entryFile": "main",
+      "sourceRoot": "apps/servicio-tracking/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/servicio-tracking/tsconfig.app.json"
+      }
+    }
   }
 }
